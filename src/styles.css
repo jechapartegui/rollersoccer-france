@@ -1,0 +1,23 @@
+html {
+  scroll-behavior: smooth;
+  background: #101612;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f2f0e9;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img,
+video {
+  max-width: 100%;
+}
