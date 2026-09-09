@@ -19,10 +19,27 @@ interface MediaChannel {
   tag: string;
 }
 
+interface ClubSpot {
+  name: string;
+  city: string;
+  department: string;
+  offer: string;
+  short: string;
+  x: number;
+  y: number;
+  url?: string;
+}
+
+interface TimelineEntry {
+  year: string;
+  title: string;
+  description: string;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css', './v2.component.css']
 })
 export class AppComponent {
   mobileMenuOpen = false;
@@ -51,6 +68,81 @@ export class AppComponent {
       years: 'Catégorie senior',
       duration: '2 × 25 min',
       description: 'Loisir, Nationale 1 ou Élite : plusieurs portes d’entrée pour jouer à son niveau et progresser.'
+    }
+  ];
+
+  readonly clubs: ClubSpot[] = [
+    {
+      name: 'R2R Roller de Rien',
+      city: 'Argenteuil',
+      department: '95 · Val-d’Oise',
+      offer: 'Adultes · jeunes selon saison',
+      short: 'ARG',
+      x: 272,
+      y: 164
+    },
+    {
+      name: 'US Ivry Roller',
+      city: 'Ivry-sur-Seine',
+      department: '94 · Val-de-Marne',
+      offer: 'U11 · U15 · U19 · Adultes · Élite',
+      short: 'IVR',
+      x: 302,
+      y: 191,
+      url: 'https://www.usivryroller.fr/'
+    },
+    {
+      name: 'UMS Easy Riders',
+      city: 'Pontault-Combault',
+      department: '77 · Seine-et-Marne',
+      offer: 'Jeunes · adultes · compétition',
+      short: 'PON',
+      x: 349,
+      y: 177,
+      url: 'https://umseasyriders.wixsite.com/umseasyriders'
+    },
+    {
+      name: 'Savigny Roller Soccer Club 91',
+      city: 'Savigny-sur-Orge',
+      department: '91 · Essonne',
+      offer: 'Jeunes · adultes · loisir · Élite',
+      short: 'SAV',
+      x: 317,
+      y: 218,
+      url: 'https://www.savignyrollersoccerclub.com/'
+    },
+    {
+      name: 'Educ Sports 13',
+      city: 'Cabriès',
+      department: '13 · Bouches-du-Rhône',
+      offer: 'Jeunes · glisse · RollerSoccer',
+      short: 'CAB',
+      x: 369,
+      y: 493,
+      url: 'https://educsports13.fr/'
+    }
+  ];
+
+  readonly timeline: TimelineEntry[] = [
+    {
+      year: '2022–2023',
+      title: 'Le championnat FFRS prend forme',
+      description: 'Une saison fédérale structurée démarre avec des compétitions nationales jeunes et adultes.'
+    },
+    {
+      year: '2024–2025',
+      title: 'Une Nationale 1 pour ouvrir la compétition',
+      description: 'La N1 adulte crée une marche intermédiaire entre découverte du championnat et niveau Élite.'
+    },
+    {
+      year: '2025–2026',
+      title: 'Les clubs existants continuent de grandir',
+      description: 'Les effectifs progressent, les matchs sont davantage filmés et le besoin de nouveaux clubs devient le prochain enjeu.'
+    },
+    {
+      year: '2026–2027',
+      title: 'U11, U15, U19, Adultes',
+      description: 'La filière jeune est affinée pour proposer des groupes d’âge plus homogènes et faciliter l’entrée dans le jeu.'
     }
   ];
 
